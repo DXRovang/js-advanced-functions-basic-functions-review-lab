@@ -9,3 +9,10 @@ let mondayWork = function(word = 'go to the office'){
   return `This Monday, I will ${word}.`
 }
 // mondayWork("eat")
+
+function wrapAdjective(string="*"){
+  return function(blah="special"){
+    return `You are ${blah}`
+    }
+}
+
