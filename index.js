@@ -12,7 +12,32 @@ let mondayWork = function(word = 'go to the office'){
 
 function wrapAdjective(string="*"){
   return function(blah="special"){
-    return `You are ${blah}`
+    return `You are ${string}${blah}${string}!`
     }
 }
 
+let Calculator = {
+  add: function(a, b){
+    return a + b
+  },
+  subtract: function(a, b){
+    return a - b
+  },
+  multiply: function(a, b){
+    return a * b
+  },
+  divide: function(a, b){
+    return a / b
+  }, 
+};
+
+function actionApplyer(int, arr){
+
+  let start = int 
+
+  for (let i= 0; i < arr.length; i++){
+    start = arr[i](start)
+  }
+
+  return start
+}
